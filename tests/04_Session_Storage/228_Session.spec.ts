@@ -1,5 +1,4 @@
-import { test } from '@playwright/test';
-import { chromium } from "playwright";
+import { test, chromium } from '@playwright/test';
 
 test('Save Session', async () => {
   await saveSession();

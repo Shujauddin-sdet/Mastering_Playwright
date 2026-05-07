@@ -1,5 +1,4 @@
-import { test } from '@playwright/test';
-import { chromium, Browser, BrowserContext, Page } from 'playwright';
+import { test, chromium } from '@playwright/test';
 
 test('Browser Context Pages', async () => {
   await run();
