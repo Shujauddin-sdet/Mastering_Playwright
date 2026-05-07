@@ -1,4 +1,9 @@
+import { test } from '@playwright/test';
 import { chromium } from "playwright";
+
+test('Multiple Contexts', async () => {
+  await multiUserTest();
+});
 
 async function multiUserTest() {
     let browser = await chromium.launch({ headless: false });
@@ -23,5 +28,3 @@ async function multiUserTest() {
 
 
 }
-
-multiUserTest();

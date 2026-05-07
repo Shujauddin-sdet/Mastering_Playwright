@@ -1,5 +1,9 @@
+import { test } from '@playwright/test';
 import { chromium, Browser, BrowserContext, Page } from 'playwright';
 
+test('Browser Context Pages', async () => {
+  await run();
+});
 
 async function run() {
     // LEVEL 1: Launch browser — heaviest operation, do it once
@@ -29,10 +33,3 @@ async function run() {
 
 
 }
-
-run();
-
-// Browser launched
-// Context created
-// Page opened
-// Title: Example Domain

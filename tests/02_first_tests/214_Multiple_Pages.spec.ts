@@ -1,4 +1,9 @@
+import { test } from '@playwright/test';
 import { chromium } from "playwright";
+
+test('Multiple Tabs', async () => {
+  await multiTabTest();
+});
 
 async function multiTabTest() {
 
@@ -17,5 +22,3 @@ async function multiTabTest() {
 
 
 }
-
-multiTabTest();

@@ -1,4 +1,9 @@
+import { test } from '@playwright/test';
 import { chromium } from "playwright";
+
+test('Save Session', async () => {
+  await saveSession();
+});
 
 async function saveSession() {
 
@@ -27,5 +32,3 @@ async function saveSession() {
     await browser.close();
 
 }
-
-saveSession();
