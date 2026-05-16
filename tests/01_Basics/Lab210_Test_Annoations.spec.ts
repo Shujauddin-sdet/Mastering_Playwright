@@ -9,9 +9,9 @@ test('has title', async ({ page }) => {
 test.skip('skipped test', async ({ page }) => {
     // This test is skipped
 });
-// Only run this test
-test.only('focused test', async ({ page }) => {
-    // Only this test runs
+// Regular test
+test('focused test', async ({ page }) => {
+    // This test runs with all others
 });
 
 // Mark as failing
