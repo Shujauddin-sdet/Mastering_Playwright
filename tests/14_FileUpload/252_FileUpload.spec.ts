@@ -1,0 +1,20 @@
+import { test, expect, Locator } from '@playwright/test';
+import path from 'path';
+
+const URL = 'https://the-internet.herokuapp.com/upload'; // replace with target page
+
+test.describe('FileUpload handling', () => {
+
+    test.beforeEach(async ({ page }) => {
+        await page.goto(URL);
+    });
+
+    test('locate FileUpload and upload', async ({ page }) => {
+
+        const filePath = path.join(__dirname, 'testdata.txt');
+        await page.locator('#file-upload').setInputFiles(filePath);
+        await page.locator('#file-submit').click();
+
+        await expect(page.locator('#uploaded-files')).toHaveText('testdata.txt');
+    });
+});

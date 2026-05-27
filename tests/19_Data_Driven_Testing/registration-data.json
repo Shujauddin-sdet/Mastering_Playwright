@@ -1,0 +1,29 @@
+[
+    {
+        "description": "valid registration",
+        "name": "Dev Sharma",
+        "username": "dev@test.com",
+        "password": "Strong@123",
+        "confirmPassword": "Strong@123",
+        "shouldPass": true,
+        "expectedError": "Email already exists"
+    },
+    {
+        "description": "password mismatch",
+        "name": "Alice",
+        "username": "alice@test.com",
+        "password": "Pass@123",
+        "confirmPassword": "WrongPass",
+        "shouldPass": false,
+        "expectedError": "Passwords do not match"
+    },
+    {
+        "description": "empty email",
+        "name": "Bob",
+        "username": "",
+        "password": "Pass@123",
+        "confirmPassword": "Pass@123",
+        "shouldPass": false,
+        "expectedError": "Email is required"
+    }
+]
